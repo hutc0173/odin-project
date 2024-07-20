@@ -32,12 +32,13 @@ function getHumanChoice(callback) {
 
 function playRound(humanChoice, computerChoice) {
   console.log(`Computer chose: ${computerChoice}`);
+
   if (computerChoice.toLowerCase() === humanChoice) {
-    console.log("Its a draw");
+    console.log("It's a draw!");
   } else if (
-    (computerChoice === "Rock" && humanChoice === "Scissors") ||
-    (computerChoice === "Scissors" && humanChoice === "Paper") ||
-    (computerChoice === "Rock" && humanChoice === "Paper")
+    (computerChoice === "Rock" && humanChoice === "scissors") ||
+    (computerChoice === "Paper" && humanChoice === "rock") ||
+    (computerChoice === "Scissors" && humanChoice === "paper")
   ) {
     console.log(`Computer wins! ${computerChoice} beats ${humanChoice}`);
     computerScore++;
